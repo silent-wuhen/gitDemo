@@ -80,6 +80,9 @@ git clone https://github.com/silent-wuhen/gitDemo.git
 git clone -b dev https://github.com/silent-wuhen/gitDemo.git
 
 cd gitDemo
+
+# 获取并合并远程仓库最新的更改
+git pull
 ```
 
 
@@ -134,5 +137,13 @@ git pull 	# git pull origin main
 git merge dev
 
 git push 	# git push origin main
+```
+
+
+
+```shell
+# 查看日志
+git log --all --pretty=oneline --abbrev-commit --graph 
+
 ```
 
