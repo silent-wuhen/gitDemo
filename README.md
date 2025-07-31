@@ -86,6 +86,14 @@ cd gitDemo
 
 # 4.案例
 
+> 远端分支：main，dev_hqh
+
+- 案例一：
+  1. main，dev_hqh两个分支分别克隆
+- 克隆之后，main上传一个file01.txt文件，dev_hqh上传一个file02.txt文件。main比dev_hqh先上传，dev_hqh要合并到main分支中
+
+
+
 ```shell
 git clone https://github.com/silent-wuhen/gitDemo.git
 
