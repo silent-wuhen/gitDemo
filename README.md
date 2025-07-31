@@ -77,7 +77,7 @@ git merge 分支名称
 git clone https://github.com/silent-wuhen/gitDemo.git
 
 # 克隆其他分支
-git clone -b dev_hqh https://github.com/silent-wuhen/gitDemo.git
+git clone -b dev https://github.com/silent-wuhen/gitDemo.git
 
 cd gitDemo
 ```
@@ -86,21 +86,53 @@ cd gitDemo
 
 # 4.案例
 
-> 远端分支：main，dev_hqh
+> 远端分支：main，dev
 
-- 案例一：
-  1. main，dev_hqh两个分支分别克隆
-- 克隆之后，main上传一个file01.txt文件，dev_hqh上传一个file02.txt文件。main比dev_hqh先上传，dev_hqh要合并到main分支中
+1. main，dev两个分支分别克隆
+2. main上传`file02.txt`文件，dev上传`file03.txt`文件。
+3. main上传，dev要合并到main分支中
 
 
+
+main分支：
 
 ```shell
 git clone https://github.com/silent-wuhen/gitDemo.git
 
 cd gitDemo
 
+echo "This is file02" > file02.txt
+
 git add .
 
-git commit -m "updata"
+git commit -m "Add file02.txt in main"
+
+git push 	# git push origin main
+```
+
+dev分支：
+
+```shell
+git clone https://github.com/silent-wuhen/gitDemo.git
+
+cd gitDemo
+
+git checkout dev
+
+echo "This is file03" > file03.txt
+
+git add .
+
+git commit -m "Add file03.txt in dev"
+
+git push 	# git push origin dev
+
+git checkout main
+
+git pull 	# git pull origin main
+
+git merge dev
+
+git push 	# git push origin main
 ```
 
