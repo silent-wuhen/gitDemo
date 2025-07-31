@@ -51,8 +51,8 @@ git log --all --pretty=oneline --abbrev-commit --graph
 # 查看本地分支
 git branch
 
-# 创建并切换分支(有则切换，无则先创建再切换)
-git checkout -b 分支名
+# 创建并切换分支
+git checkout -b 分支名		# 有分支 git checkout 分支名
 
 # 合并分支(merge)：先到目标分支上
 git merge 分支名称
@@ -72,16 +72,22 @@ git merge 分支名称
 
 
 
+```shell
+# 从远程仓库克隆(克隆main分支)
+git clone https://github.com/silent-wuhen/gitDemo.git
+
+# 克隆其他分支
+git clone -b dev_hqh https://github.com/silent-wuhen/gitDemo.git
+
+cd gitDemo
 ```
 
-```
 
 
-
-
+# 4.案例
 
 ```shell
-git clone git@github.com:silent-wuhen/gitDemo.git
+git clone https://github.com/silent-wuhen/gitDemo.git
 
 cd gitDemo
 
